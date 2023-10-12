@@ -22,6 +22,7 @@ jobs:
 
 # https://github.com/marketplace/actions/docker-build-push-action
 # docker push wheeler0772/hello-world-001-images:tagname
+# Error: Command failed: docker login -u *** --password-stdin docker.io
 
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
