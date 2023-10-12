@@ -54,6 +54,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>hello-world-001</finalName>
 	</build>
 
 </project>

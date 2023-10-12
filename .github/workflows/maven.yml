@@ -29,3 +29,15 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+        
+# https://github.com/marketplace/actions/docker-build-push-action
+# docker push wheeler0772/hello-world-001-images:tagname
+    -  name: Build & push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: wheeler0772/hello-world-001-images
+        tags: latest
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
