@@ -24,21 +24,14 @@ jobs:
 # docker push wheeler0772/hello-world-001-images:tagname
 # Error: Command failed: docker login -u *** --password-stdin docker.io
 
-      - name: Dump DOCKER_USERNAME
-        run: echo ${{ env.DOCKER_USERNAME }}
-
-      - name: Dump DOCKER_PASSWORD
-        run: echo ${{ env.DOCKER_PASSWORD }}
-        
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
           image: wheeler0772/hello-world-001-images
           tags: latest
-          registry: docker.io
           dockerfile: Dockerfile
-          username: ${{ env.DOCKER_USERNAME }}
-          password: ${{ env.DOCKER_PASSWORD }}
+          username: wheeler0772
+          password: Kitty710!
 
 # https://github.com/marketplace/actions/build-and-push-docker-images#git-context 
 # Error: Username and password required
