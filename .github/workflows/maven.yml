@@ -40,7 +40,8 @@ jobs:
       #     username: ${{ secrets.DOCKER_USERNAME }}
       #     password: ${{ secrets.DOCKER_PASSWORD }}
 
-# https://github.com/marketplace/actions/build-and-push-docker-images#git-context
+# https://github.com/marketplace/actions/build-and-push-docker-images#git-context 
+# Updated secrets
 
       -
         name: Set up QEMU
