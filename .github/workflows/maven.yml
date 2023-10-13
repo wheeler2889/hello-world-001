@@ -24,9 +24,11 @@ jobs:
 # docker push wheeler0772/hello-world-001-images:tagname
 # Error: Command failed: docker login -u *** --password-stdin docker.io
 
-      - name: Dump DOCKER credentials
+      - name: Dump DOCKER_USERNAME
         run: echo DOCKER_USERNAME ${{ secrets.DOCKER_USERNAME }}
-        run: echo DOCKER_PASSWORD ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Dump DOCKER_PASSWORD
+        run: echo DOCKER_PASSWORD ${{ secrets.DOCKER_PASSWORD }}   
 
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
