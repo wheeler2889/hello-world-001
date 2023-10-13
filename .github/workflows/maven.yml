@@ -25,12 +25,8 @@ jobs:
 # Error: Command failed: docker login -u *** --password-stdin docker.io
 
       - name: Dump DOCKER credentials
-        env:
-          DOCKER_USERNAME: ${{ toJson(secrets.DOCKER_USERNAME) }}
-        run: echo DOCKER_USERNAME "$DOCKER_USERNAME"
-        env:
-          DOCKER_PASSWORD: ${{ toJson(secrets.DOCKER_PASSWORD) }}
-        run: echo DOCKER_PASSWORD "$DOCKER_PASSWORD"
+        run: echo DOCKER_USERNAME ${{ secrets.DOCKER_USERNAME }}
+        run: echo DOCKER_PASSWORD ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
