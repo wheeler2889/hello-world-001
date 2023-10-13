@@ -29,6 +29,7 @@ jobs:
         with:
           image: wheeler0772/hello-world-001-images
           tags: latest
+          registry: docker.io
           dockerfile: Dockerfile
           username: wheeler0772
           password: Kitty710!
