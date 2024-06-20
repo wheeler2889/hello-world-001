@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>state.mn.us.dhs</groupId>
 	<artifactId>hello-world-001</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>hello-world-001</name>
 	<description>MAARC Application</description>
 	<properties>
